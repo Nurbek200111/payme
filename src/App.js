@@ -11,12 +11,12 @@ import Transfer from './Transfer/Transfer';
 import Services from './Services/Services';
 import AddCard from './AddCard/AddCard';
 import InputOutput from './InputOutput/InputOutput';
-// import AppWrapper from './AppWrapper'; // Qo‘shilgan
+import AppWrapper from './AppWrapper'; 
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <AppWrapper> */}
+      <AppWrapper>
         <div className="App">
           <nav className='navBottom'>
             <NavLink style={{textDecoration: "none", color:"black", padding: "10px 0px"}} to="/" ><FaHome /><p>Asosiy</p></NavLink>
@@ -35,7 +35,7 @@ function App() {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
-      {/* </AppWrapper> */}
+      </AppWrapper>
     </BrowserRouter>
   );
 }
